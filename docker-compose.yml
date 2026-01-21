@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  remnux:
+    build: .
+    hostname: tailscale-remnux
+    environment:
+      - TS_AUTHKEY=tskey-client-notAReal-OAuthClientSecret1Atawk
+      - TS_EXTRA_ARGS=--advertise-tags=tag:service --ssh
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ${PWD}/data/tailscale:/var/lib/tailscale
+      - ${PWD}/data/sandbox:/home/remnux/sandbox
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - net_admin
+    restart: unless-stopped
