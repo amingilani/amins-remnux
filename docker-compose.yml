@@ -4,7 +4,6 @@ services:
     build: .
     hostname: tailscale-remnux
     environment:
-      - TS_AUTHKEY=tskey-client-notAReal-OAuthClientSecret1Atawk
       - TS_EXTRA_ARGS=--advertise-tags=tag:service --ssh
       - DISPLAY=${DISPLAY}
     volumes:
