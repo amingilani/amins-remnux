@@ -2,7 +2,7 @@ version: "3.7"
 services:
   remnux:
     build: .
-    hostname: tailscale-remnux
+    hostname: remnux
     environment:
       - TS_EXTRA_ARGS=--advertise-tags=tag:service --ssh
       - DISPLAY=${DISPLAY}
