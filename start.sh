@@ -8,7 +8,7 @@ tailscale up ${TS_EXTRA_ARGS}
 set -e
 
 GITHUB_USER="amingilani"
-LOCALUSER = "remnux"
+LOCALUSER="remnux"
 AUTHORIZED_KEYS="~${LOCALUSER}/.ssh/authorized_keys"
 
 # Create .ssh directory if it doesn't exist
