@@ -8,11 +8,12 @@ tailscale up ${TS_EXTRA_ARGS}
 set -e
 
 GITHUB_USER="amingilani"
-AUTHORIZED_KEYS="${HOME}/.ssh/authorized_keys"
+LOCALUSER = "remnux"
+AUTHORIZED_KEYS="~${LOCALUSER}/.ssh/authorized_keys"
 
 # Create .ssh directory if it doesn't exist
-mkdir -p "${HOME}/.ssh"
-chmod 700 "${HOME}/.ssh"
+mkdir -p "~${LOCALUSER}/.ssh"
+chmod 700 "~${LOCALUSER}/.ssh"
 
 # Fetch keys from GitHub
 echo "Fetching SSH keys for ${GITHUB_USER}..."
