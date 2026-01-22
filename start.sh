@@ -34,6 +34,8 @@ fi
 echo "# GitHub keys for ${GITHUB_USER} - added $(date)" >> "$AUTHORIZED_KEYS"
 echo "$KEYS" >> "$AUTHORIZED_KEYS"
 
+chown -R ${LOCALUSER}:${LOCALUSER} "/home/${LOCALUSER}/.ssh"
+
 # Set proper permissions
 chmod 600 "$AUTHORIZED_KEYS"
 
