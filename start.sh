@@ -9,11 +9,11 @@ set -e
 
 GITHUB_USER="amingilani"
 LOCALUSER="remnux"
-AUTHORIZED_KEYS="~${LOCALUSER}/.ssh/authorized_keys"
+AUTHORIZED_KEYS="/home/${LOCALUSER}/.ssh/authorized_keys"
 
 # Create .ssh directory if it doesn't exist
-mkdir -p "~${LOCALUSER}/.ssh"
-chmod 700 "~${LOCALUSER}/.ssh"
+mkdir -p "/home/${LOCALUSER}/.ssh"
+chmod 700 "/home/${LOCALUSER}/.ssh"
 
 # Fetch keys from GitHub
 echo "Fetching SSH keys for ${GITHUB_USER}..."
