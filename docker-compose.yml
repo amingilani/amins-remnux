@@ -4,7 +4,7 @@ services:
     build: .
     hostname: remnux
     environment:
-      - TS_EXTRA_ARGS=--advertise-tags=tag:service --ssh
+      - TS_EXTRA_ARGS=--advertise-tags=tag:service
       - DISPLAY=${DISPLAY}
     volumes:
       - ${PWD}/data/tailscale:/var/lib/tailscale
